@@ -1,0 +1,9 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    margin-top: 50px;
+}
+#searchForm {
+    margin-bottom: 20px;
+}
