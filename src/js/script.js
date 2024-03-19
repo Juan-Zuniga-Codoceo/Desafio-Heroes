@@ -19,28 +19,22 @@ $(document).ready(function(){
     });
 
     function renderHeroInfo(hero) {
-        var heroInfoHtml = '<div class="col-md-4">';
-        heroInfoHtml += '<div class="card">';
-        heroInfoHtml += '<img class="card-img-top" src="' + hero.image.url + '" alt="' + hero.name + '">';
-        heroInfoHtml += '<div class="card-body">';
+        var heroInfoHtml = '<div class="row">';
+        heroInfoHtml += '<div class="col-md-6">';
+        heroInfoHtml += '<img class="card-img-top small-image mb-1" src="' + hero.image.url + '" alt="' + hero.name + '">';
+        heroInfoHtml += '</div>';
+        heroInfoHtml += '<div class="col-md-6">';
         heroInfoHtml += '<h5 class="card-title">' + hero.name + '</h5>';
-        heroInfoHtml += '<p class="card-text">Intelligence: ' + hero.powerstats.intelligence + '</p>';
-        heroInfoHtml += '<p class="card-text">Strength: ' + hero.powerstats.strength + '</p>';
-        heroInfoHtml += '<p class="card-text">Speed: ' + hero.powerstats.speed + '</p>';
-        heroInfoHtml += '<p class="card-text">Durability: ' + hero.powerstats.durability + '</p>';
-        heroInfoHtml += '<p class="card-text">Power: ' + hero.powerstats.power + '</p>';
-        heroInfoHtml += '<p class="card-text">Combat: ' + hero.powerstats.combat + '</p>';
-        heroInfoHtml += '<p class="card-text">Occupation: ' + hero.work.occupation + '</p>';
+        heroInfoHtml += '<p class="card-text">Ocupación: ' + hero.work.occupation + '</p>';
         heroInfoHtml += '<p class="card-text">Base: ' + hero.work.base + '</p>';
-        heroInfoHtml += '<p class="card-text">Aliases: ' + hero.biography.aliases.join(', ') + '</p>';
-        heroInfoHtml += '<p class="card-text">Alignment: ' + hero.biography.alignment + '</p>';
-        heroInfoHtml += '<p class="card-text">Publisher: ' + hero.biography.publisher + '</p>';
-        heroInfoHtml += '<p class="card-text">First Appearance: ' + hero.biography['first-appearance'] + '</p>';
-        heroInfoHtml += '<p class="card-text">Gender: ' + hero.appearance.gender + '</p>';
-        heroInfoHtml += '<p class="card-text">Race: ' + hero.appearance.race + '</p>';
-        heroInfoHtml += '<p class="card-text">Height: ' + hero.appearance.height.join(', ') + '</p>';
-        heroInfoHtml += '<p class="card-text">Weight: ' + hero.appearance.weight.join(', ') + '</p>';
-        heroInfoHtml += '</div></div></div>';
+        heroInfoHtml += '<p class="card-text">Alianzas: ' + hero.biography.aliases.join(', ') + '</p>';
+        heroInfoHtml += '<p class="card-text">Publicado por: ' + hero.biography.publisher + '</p>';
+        heroInfoHtml += '<p class="card-text">Primera Aparición: ' + hero.biography['first-appearance'] + '</p>';
+        heroInfoHtml += '<p class="card-text">Genero: ' + hero.appearance.gender + '</p>';
+        heroInfoHtml += '<p class="card-text">Raza: ' + hero.appearance.race + '</p>';
+        heroInfoHtml += '<p class="card-text">Altura: ' + hero.appearance.height.join(', ') + '</p>';
+        heroInfoHtml += '<p class="card-text">Peso: ' + hero.appearance.weight.join(', ') + '</p>';
+        heroInfoHtml += '</div></div>';
         $('#heroInfo').html(heroInfoHtml);
         renderChart(hero.powerstats);
     }

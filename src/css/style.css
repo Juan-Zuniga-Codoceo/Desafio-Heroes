@@ -2,8 +2,23 @@ body {
     font-family: Arial, sans-serif;
 }
 .container {
-    margin-top: 50px;
+    margin-top: 500px;
 }
 #searchForm {
     margin-bottom: 20px;
+}
+.small-image {
+    max-width: 150px;
+    height: auto; /* Para mantener la proporción de la imagen */
+}
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem; /* Aumenta el tamaño del título */
+}
+
+.card-text {
+    margin-bottom: 5px; /* Aumenta el espacio entre los párrafos */
 }

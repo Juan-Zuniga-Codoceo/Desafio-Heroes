@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SuperHero Search</title>
-<link rel="stylesheet" href="/src/css/style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -31,9 +31,10 @@
 </nav>
 
 <div class="container">
-    <div class="col-md-6">
-        <img src="/img/sh1.jpg" alt="SuperHero1" class="img-fluid mb-4">
-    </div>
+  
+<div class="col-md-6">
+  <img src="/img/sh1.jpg" alt="SuperHero1" class="img-fluid mb-4">
+</div>
     <h1 class="text-center mb-4">Busca tu SuperHéroe</h1>
     <form id="searchForm">
         <div class="form-group">
@@ -43,19 +44,23 @@
         <button type="submit" class="btn btn-primary">Buscar</button>
     </form>
     <div class="row mt-4">
-        
         <!-- Columna para la información del héroe -->
         <div class="col-md-6">
             <div class="card">
+                <div class="card-header">
+                    Información del Héroe
+                </div>
                 <div class="card-body" id="heroInfo">
+                    <!-- Aquí se mostrará la información del héroe -->
                 </div>
             </div>
         </div>
-    </div>
-    <!-- División para el gráfico -->
-    <div class="row mt-4">
-        <div class="col-md-12">
+        <!-- Columna para el gráfico -->
+        <div class="col-md-6">
             <div class="card">
+                <div class="card-header">
+                    Gráfico de Estadísticas
+                </div>
                 <div class="card-body">
                     <div id="chartContainer" style="height: 300px;"></div>
                 </div>
@@ -70,3 +75,10 @@
 <script src="/src/js/script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
