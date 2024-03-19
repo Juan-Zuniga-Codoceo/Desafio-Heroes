@@ -2,23 +2,40 @@ body {
     font-family: Arial, sans-serif;
 }
 .container {
-    margin-top: 500px;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
 }
+
 #searchForm {
     margin-bottom: 20px;
 }
-.small-image {
-    max-width: 150px;
-    height: auto; /* Para mantener la proporción de la imagen */
+.navbar-brand img {
+    max-height: 50px;
+    width: auto; 
 }
 .card-body {
     padding: 20px;
 }
-
 .card-title {
-    font-size: 1.25rem; /* Aumenta el tamaño del título */
+    font-size: 1.25rem; 
 }
-
 .card-text {
-    margin-bottom: 5px; /* Aumenta el espacio entre los párrafos */
+    margin-bottom: 5px; 
+}
+.navbar {
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    background-color: black;
+}
+.align-items-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-fluid {
+    max-width: 100%; /* Ajusta este valor para cambiar el tamaño de la imagen */
+    height: auto;
+    display: block;
+    margin-left: 500px;
+    margin-right: auto;
 }

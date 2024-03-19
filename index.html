@@ -5,57 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SuperHero Search</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="/src/css/style.css">
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">SuperHero Chile</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Acerca de</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contacto</a>
-        </li>
-      </ul>
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/img/sh2.jpg" alt="SuperHero Chile" class="">  
+        <span style="color: white;">SuperHero</span>
+      </a>
     </div>
-  </div>
-</nav>
-
-<div class="container">
+  </nav>
   
-<div class="col-md-6">
-  <img src="/img/sh1.jpg" alt="SuperHero1" class="img-fluid mb-4">
+<div class="container">
+  <div class="col-md-6 d-flex justify-content-center align-items-center">
+    <img src="/img/sh1.jpg" alt="SuperHero1" class="img-fluid mb-4">
 </div>
-    <h1 class="text-center mb-4">Busca tu SuperHéroe</h1>
+  <div class="container">
+  
+    <h1 class="text-center mb-4">Encuentra tu SuperHéroe</h1>
     <form id="searchForm">
         <div class="form-group">
-            <label for="heroNumber">Ingresa el número del héroe:</label>
+            <label for="heroNumber">Ingresa el número del héroe a buscar:</label>
             <input type="text" class="form-control" id="heroNumber" placeholder="Ej: 1, 2, 3...">
         </div>
         <button type="submit" class="btn btn-primary">Buscar</button>
     </form>
     <div class="row mt-4">
-        <!-- Columna para la información del héroe -->
+        
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
                     Información del Héroe
                 </div>
                 <div class="card-body" id="heroInfo">
-                    <!-- Aquí se mostrará la información del héroe -->
+                  
                 </div>
             </div>
         </div>
-        <!-- Columna para el gráfico -->
+       
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">

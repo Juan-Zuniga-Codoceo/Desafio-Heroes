@@ -44,7 +44,7 @@ $(document).ready(function(){
     function renderChart(powerstats) {
         var chartData = [];
         for (var stat in powerstats) {
-            chartData.push({ y: parseInt(powerstats[stat]), label: stat });
+            chartData.push({ y: parseInt(powerstats[stat]), label: stat, legendText: stat });
         }
     
         var chart = new CanvasJS.Chart("chartContainer", {
@@ -58,9 +58,21 @@ $(document).ready(function(){
                 yValueFormatString: "##0\"%\"",
                 indexLabel: "{label} {y}",
                 dataPoints: chartData
-            }]
+            }],
+            legend: {
+                cursor: "pointer",
+                itemclick: function (e) {
+                    if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                        e.dataSeries.visible = false;
+                    } else {
+                        e.dataSeries.visible = true;
+                    }
+                    e.chart.render();
+                }
+            }
         });
         chart.render();
     }
+    
     
 });
